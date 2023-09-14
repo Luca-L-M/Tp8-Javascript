@@ -1,10 +1,11 @@
-//CalculadoraDeEdad(prompt("Ingrese su fecha de macimiento (año-mes-dia)"));
 //TirandoFruta(prompt("Ingrese una fruta a buscar: "));
 //ComparandoObjetosYDatos();
 //YoObjeto();
-//let numeros = [1,3,5,7,13]; DobleElementos(numeros);
-const result = document.getElementById('resultados');
-result = CalculadoraDeEdad(prompt("Ingrese su fecha de macimiento (año-mes-dia)"));
+let numeros = [1,3,5,7,13]; DobleElementos(numeros)
+TrianguloAsteriscos()
+/*const result = document.getElementById('resultados')
+let resultado = CalculadoraDeEdad(prompt('Ingrese su fecha de macimiento (año-mes-dia)'))
+result.innerHTML = resultado*/
 //1
 
 function CalculadoraDeEdad(fecha){
@@ -26,13 +27,13 @@ function TirandoFruta(result){
     let bool = false;
     const frutas = ["Melon", "Mandarina", "Naranja", "Arandano", "Uva", "Pera", "Sandia", "Durazno", "Banana", "Manzana"];
     for(fruta of frutas){
-        console.log(fruta);
+        return fruta;
     }
     for(fruta of frutas){
-        if(result === fruta){bool = true;}
+        if(result.toLowerCase() === fruta.toLowerCase()){bool = true;}
     }
     if(bool){console.log(`Si, tenemos ${result}.`)}
-        else {console.log(`No, no tenemos esa ${result}.`)}
+        else {return `No, no tenemos esa ${result}.`}
 }
 
 //3
@@ -58,7 +59,7 @@ function YoObjeto(){
     }
     for(let element in ciudad){
         console.log(`${element}: ${ciudad[element]}`)
-    };
+    }
 }
 
 //5
@@ -72,10 +73,30 @@ function DobleElementos(numeros){
     console.log(doble);
 }
 //6
+
+function TrianguloAsteriscos()
+{
+    let ast='*'
+    for(let i=1;i<=5;i++)
+    {
+       console.log(ast)
+       ast +='*'
+    }
+    let guion = '-'
+    ast = '*'
+    let a = 1
+    let guionaux
+    for(let i = 4; i>=0; i--)
+    {
+        console.log(guion.repeat(i)+ast.repeat(a)+guion.repeat(i))
+        a += 2
+    }
+}
 //7
 
-function NombresA(){
-
+function NombresA(array)
+{
+    
 }
 //8
 //9
